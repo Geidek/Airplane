@@ -4,7 +4,9 @@ public class ULD
 {
     public ULD()
     {
-        int number = random.nextInt(10000,99999);
+        int lowNumber = 10000;
+        int highNumber = 99999;
+        int number = random.nextInt(highNumber- lowNumber+1) + lowNumber;
         id = "AKE" + String.valueOf(number);
     }
 

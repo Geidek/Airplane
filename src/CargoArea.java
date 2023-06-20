@@ -14,6 +14,11 @@ public class CargoArea {
     }
 
     private locations location;
+    
+    public locations getLocation() {
+        return location;
+    }
+
     private CargoSpace cargoSpaceLeft;
     private CargoSpace cargoSpaceRight;
 

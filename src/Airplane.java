@@ -1,12 +1,15 @@
 import java.util.UUID;
 
+
 public class Airplane {
 
     public Airplane(Wing leftWing, Wing rightWing, Stabilizer horizontalStabilizer, Stabilizer verticalStabilizer, String registration)
     {
         body = new Body();
         this.rightWing = rightWing;
+        this.rightWing.setPosition(Wing.POSITION.RIGHT);
         this.leftWing = leftWing;
+        this.leftWing.setPosition(Wing.POSITION.LEFT);
         this.registration = registration;
         this.serialNumber = UUID.randomUUID();
     }
@@ -26,6 +29,18 @@ public class Airplane {
     private final double cruiseSpeedInMach = 0.85;
     private final double maximumOperatingSpeedInMach = 0.89;
     private CARRIER carrier;
+
+    public Body getBody() {
+        return body;
+    }
+
+    public Stabilizer getHorizontalStabilizer() {
+        return HorizontalStabilizer;
+    }
+
+    public Stabilizer getVerticalStabilizer() {
+        return VerticalStabilizer;
+    }
 
     public UUID getSerialNumber() {
         return serialNumber;

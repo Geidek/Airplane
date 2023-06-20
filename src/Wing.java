@@ -5,6 +5,22 @@ public class Wing {
     }
     private Fan fan;
 
+    public Fan getFan() {
+        return fan;
+    }
+    
+    private POSITION position; 
+
+
+    public POSITION getPosition() {
+        return position;
+    }
+
+
+    public void setPosition(POSITION position) {
+        this.position = position;
+    }
+
 
     //SetMethode erstellen und implementieren!
     public enum POSITION
@@ -12,5 +28,7 @@ public class Wing {
         LEFT,
         RIGHT
     }
+
+
 
 }

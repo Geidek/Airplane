@@ -10,6 +10,15 @@ public class Body {
     }
 
     private Cockpit cockpit;
+
+    public Cockpit getCockpit() {
+        return cockpit;
+    }
+    
+    public Cabin getCabin() {
+        return cabin;
+    }
+
     private Cabin cabin;
     private CargoArea cargoArea01;
     private CargoArea cargoArea02;
