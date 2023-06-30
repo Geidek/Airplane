@@ -5,13 +5,14 @@ public class Cabin {
 
 
 
+
     public Cabin(){
-        rowList = new LinkedList<Row>();
-        for (int i = 0; i<42; i++)
-            rowList.add(new Row());
+        businessClass = new LinkedList<Row>();
+        for (int i = 0; i<8; i++)
+            businessClass.add(new Row(BookingClass.BUSINESS, i+1));
     }
 
-    private List<Row> rowList;
+    private List<Row> businessClass;
 
 
 }

@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="106fd412-fb3a-4a0b-914b-eb3421040c58" name="Changes" comment="New Project">
-      <change afterPath="$PROJECT_DIR$/src/Airplane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cabin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CargoArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CargoSpace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cockpit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CryptoTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Fan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Row.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stabilizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ULD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Wing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookingClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cabin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cabin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Row.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +21,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e91bfdcf-53bd-4c43-8247-84b485d279f6" />
+        <option name="url" value="https://github.com/Geidek/AirplaneA350.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
@@ -53,15 +56,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "temurin-17",
+    "last_opened_file_path": "D:/GitHub/AirplaneA350",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pathVariables",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -74,6 +79,9 @@
       <option name="presentableId" value="Default" />
       <updated>1687241337393</updated>
       <workItem from="1687241338390" duration="12015000" />
+      <workItem from="1688127877883" duration="417000" />
+      <workItem from="1688128310096" duration="2693000" />
+      <workItem from="1688135297872" duration="1641000" />
     </task>
     <task id="LOCAL-00001" summary="New Project">
       <created>1687241907123</created>
