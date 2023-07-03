@@ -3,6 +3,12 @@ public class Main {
 
         //Hashcode Variante 2 implementieren.
 
+        final String secretKey = Configuration.INSTANCE.secretKey;
+        String plainMessage = "";
+        String encryptedString = CryptoTools.Encrypt(plainMessage, secretKey);
+        String decryptedString = CryptoTools.Decrypt(encryptedString, secretKey);
+
+
         Wing leftWing = new Wing();
         Wing rightWing = new Wing();
         String registration = "D-AIXN";
