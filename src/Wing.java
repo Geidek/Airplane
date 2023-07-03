@@ -22,7 +22,6 @@ public class Wing {
     }
 
 
-    //SetMethode erstellen und implementieren!
     public enum POSITION
     {
         LEFT,

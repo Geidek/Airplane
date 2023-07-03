@@ -26,6 +26,10 @@ public class Seat
     private final String seatChar;
     private final int rowNumber;
     private final BookingClass bookingClass;
+    
+    public String getSeatAsString(){
+        return rowNumber + seatChar;
+    }
 
     public int getPitch() {
         return pitch;

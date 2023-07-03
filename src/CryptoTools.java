@@ -9,24 +9,23 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class CryptoTools {
 
-private static SecretKeySpec secretKey;
+    private static SecretKeySpec secretKey;
 
-private static void SetKey(String string)
-{
-    MessageDigest messageDigest;
+    private static void SetKey(String string) {
+        MessageDigest messageDigest;
 
-    try {
-        byte[] key = string.getBytes(StandardCharsets.UTF_8);
-        messageDigest = MessageDigest.getInstance("SHA-1");
-        key = messageDigest.digest(key);
+        try {
+            byte[] key = string.getBytes(StandardCharsets.UTF_8);
+            messageDigest = MessageDigest.getInstance("SHA-1");
+            key = messageDigest.digest(key);
             key = Arrays.copyOf(key, 16);
             secretKey = new SecretKeySpec(key, "AES");
-    } catch (NoSuchAlgorithmException e) {
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
+        }
     }
-}
 
-public static String Encrypt(String plainMessage, String secretKey) {
+    public static String Encrypt(String plainMessage, String secretKey) {
         try {
             SetKey(secretKey);
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
@@ -38,9 +37,8 @@ public static String Encrypt(String plainMessage, String secretKey) {
 
         return null;
     }
-}
 
-public static String Decrypt(String cipher, String secretKey) {
+    public static String Decrypt(String cipher, String secretKey) {
         try {
             SetKey(secretKey);
             Cipher instance = Cipher.getInstance("AES/ECB/PKCS5PADDING");
@@ -52,3 +50,5 @@ public static String Decrypt(String cipher, String secretKey) {
 
         return null;
     }
+
+}

@@ -12,6 +12,7 @@ public class Airplane {
         this.leftWing.setPosition(Wing.POSITION.LEFT);
         this.registration = registration;
         this.serialNumber = UUID.randomUUID();
+        this.actualSpeedInMach = 0;
     }
 
     private final Body body;
@@ -28,6 +29,19 @@ public class Airplane {
     private final int maximumRangeInKm = 15372;
     private final double cruiseSpeedInMach = 0.85;
     private final double maximumOperatingSpeedInMach = 0.89;
+
+    private double actualSpeedInMach;
+    public double getActualSpeedInMach() {
+        return actualSpeedInMach;
+    }
+
+    public void setActualSpeedInMach(double speed) {
+        if (speed <= maximumOperatingSpeedInMach)
+        this.actualSpeedInMach = speed;
+        else 
+        this.actualSpeedInMach = maximumOperatingSpeedInMach;
+    }
+
     private CARRIER carrier;
 
     public Body getBody() {
