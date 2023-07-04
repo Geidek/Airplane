@@ -3,19 +3,19 @@ import java.util.List;
 
 public class BoardingPass extends Document {
 
-    public BoardingPass(String documentType) {
-        super(documentType);
-        this.baggages = new LinkedList<BaggageTag>();
+    public BoardingPass(String documentType, String id) {
+        super(documentType, id);
+        this.baggageTags = new LinkedList<BaggageTag>();
     }
 
-    private List<BaggageTag> baggages;
+    private List<BaggageTag> baggageTags;
 
-    public List<BaggageTag> getBaggages() {
-        return baggages;
+    public List<BaggageTag> getBaggageTags() {
+        return baggageTags;
     }
 
     public void AddBaggageTagToBoardingPass(BaggageTag baggageTag) {
-        baggages.add(baggageTag);
+        baggageTags.add(baggageTag);
     }
 
 

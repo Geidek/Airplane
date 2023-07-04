@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="106fd412-fb3a-4a0b-914b-eb3421040c58" name="Changes" comment="New Project">
-      <change afterPath="$PROJECT_DIR$/src/BookingClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FederalPoliceOfficer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IDCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cabin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cabin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Baggage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Baggage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BaggageTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaggageTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardingPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardingPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CheckIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CheckIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Row.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConveyorBelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConveyorBelt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FingerprintScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FingerprintScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Passport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Passport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PassportScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PassportScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STorageArea.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,16 +78,37 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "temurin-17",
-    "last_opened_file_path": "D:/GitHub/AirplaneA350",
+    "last_opened_file_path": "D:/gitsource/AirplaneA350",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="AirplaneA350" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\wn00196471\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="106fd412-fb3a-4a0b-914b-eb3421040c58" name="Changes" comment="" />
@@ -82,6 +120,7 @@
       <workItem from="1688127877883" duration="417000" />
       <workItem from="1688128310096" duration="2693000" />
       <workItem from="1688135297872" duration="1641000" />
+      <workItem from="1688448265133" duration="22440000" />
     </task>
     <task id="LOCAL-00001" summary="New Project">
       <created>1687241907123</created>
@@ -110,5 +149,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Project" />
     <option name="LAST_COMMIT_MESSAGE" value="New Project" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CheckIn.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

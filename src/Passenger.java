@@ -1,18 +1,24 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class Passenger 
+public class Passenger extends Human
 {
     public Passenger(){
+        super();
         this.smartphone = new Smartphone();
-        this.passport = new Passport();
+        //Todo: hier weiter machen!
     }
 
-    private String name;
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    private String result;
     private String role;
-    private String gender;
-    private String dateOfBirth;
-    private String fingerprint;
     private String bookingID;
     private String flight;
     private String from;
@@ -22,12 +28,25 @@ public class Passenger
     private BookingClass bookingClass;
     private String seatAsString;
     private int countCheckedBaggage;
+
+    public void setBaggageList(List<Baggage> baggageList) {
+        this.baggageList = baggageList;
+    }
+
     private List<Baggage> baggageList = new LinkedList<Baggage>();
     private boolean warrant;
     private Smartphone smartphone;
     private Passport passport;
-    private String passportId;
-    private String iris;    
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    private int number;
 
     public String getRole() {
         return role;
@@ -80,61 +99,13 @@ public class Passenger
         this.bookingClass = bookingClass;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
 
 
 
-    public String getPassportId() {
-        return passportId;
-    }
-
-    public void setPassportId(String passportId) {
-        this.passportId = passportId;
-    }
 
 
 
-    public String getIris() {
-        return iris;
-    }
 
-    public void setIris(String iris) {
-        this.iris = iris;
-    }
-
-    public String getFingerprint() {
-        return fingerprint;
-    }
-
-    public void setFingerprint(String fingerprint) {
-        this.fingerprint = fingerprint;
-    }
 
     public String getBookingID() {
         return bookingID;
@@ -202,6 +173,24 @@ public class Passenger
 
     public void setPassport(Passport passport) {
         this.passport = passport;
+    }
+
+    public void AddBaggageToConveyorBelt(ConveyorBelt conveyorBelt){
+        for(Baggage baggage : baggageList){
+            BaggageTag baggageTag = new BaggageTag();
+            baggage.setBaggageTag(baggageTag);
+            var documents = smartphone.getWallet().getDocuments();
+
+            for (Document document : documents)
+            {
+                if(document.getDocumentType().equalsIgnoreCase("Boardingpass")){
+                    BoardingPass boardingPass = (BoardingPass) document;
+                    boardingPass.AddBaggageTagToBoardingPass(baggageTag);
+                }
+            }
+
+            conveyorBelt.AddBaggageToConveyorBelt(baggageTag, baggage);
+        }
     }
 
 
