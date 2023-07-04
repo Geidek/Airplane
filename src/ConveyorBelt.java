@@ -1,12 +1,28 @@
-import java.util.Hashtable;
-import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class ConveyorBelt {
 
-    private Hashtable<BaggageTag, Baggage> storage = new Hashtable<>();
-    public void AddBaggageToConveyorBelt(BaggageTag baggageTag, Baggage baggage)
+    private Queue<Baggage> storage = new ConcurrentLinkedQueue<>();
+    public void AddBaggageToConveyorBelt(Baggage baggage)
     {
-        storage.put(baggageTag, baggage);
+        storage.add(baggage);
+        isConveyorBeltEmpty = false;
     }
+
+    public Baggage GetBaggageFromConveyorBelt(){
+        Baggage baggage = storage.poll();
+        if (baggage==null){
+            isConveyorBeltEmpty = true;
+            return null;
+        }
+        return baggage;
+    }
+
+    public boolean isConveyorBeltEmpty() {
+        return isConveyorBeltEmpty;
+    }
+
+    private boolean isConveyorBeltEmpty = true;
 
 }

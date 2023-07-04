@@ -16,7 +16,8 @@ public class CheckIn {
         this.conveyorBelt = new ConveyorBelt();
         this.storageAreaForEmptyULD = new ConcurrentLinkedQueue<>();
         this.storageAreaForFilledULD = new ConcurrentLinkedQueue<>();
-        this.robot = new Robot();
+        AddEmptyULDsToStorageArea();
+        this.robot = new Robot(storageAreaForEmptyULD, storageAreaForFilledULD, conveyorBelt);
         this.federalPoliceOfficer = new FederalPoliceOfficer();
     }
 
@@ -36,6 +37,8 @@ public class CheckIn {
         }
         economyQueueForCheckIn.addAll(tempQueue);
     }
+
+
 
     private void AddPassengerToBoardingQueue(Passenger passenger, Queue<Passenger> boardingQueue) {
         passenger.getSmartphone().getWallet().AddDocumentToWallet(new BoardingPass("BoardingPass", passenger.getBookingID()));
@@ -61,13 +64,13 @@ public class CheckIn {
                 AddPassengerToBoardingQueue(passenger, boardingQueue);
 
             } else if (randomNumber == 2 && passportScanner.Scan(database, passenger)) {
-                    AddPassengerToBoardingQueue(passenger, boardingQueue);
+                AddPassengerToBoardingQueue(passenger, boardingQueue);
 
-            } else if (randomNumber == 3 && fingerprintScanner.Scan(database,passenger)) {
-                    AddPassengerToBoardingQueue(passenger, boardingQueue);
+            } else if (randomNumber == 3 && fingerprintScanner.Scan(database, passenger)) {
+                AddPassengerToBoardingQueue(passenger, boardingQueue);
             }
         }
-        recordTable.put(new Record(passenger.getBookingID(), passenger.getName(), passenger.getFlight(), passenger.getTo(), passenger.getCountCheckedBaggage(),passenger.getResult()), passenger);
+        recordTable.put(new Record(passenger.getBookingID(), passenger.getName(), passenger.getFlight(), passenger.getTo(), passenger.getCountCheckedBaggage(), passenger.getResult()), passenger);
 
     }
 
@@ -80,10 +83,15 @@ public class CheckIn {
         while (!economyQueueForCheckIn.isEmpty()) {
             DoCheckIn(economyQueueForCheckIn, economyQueueForBoarding, database);
         }
+        while(!conveyorBelt.isConveyorBeltEmpty()){
+            robot.AddBaggageToULD();
+        }
 
         return recordTable;
 
     }
+
+    private ULD actualULD;
 
     public Queue<Staff> getStaffQueue() {
         return staffQueue;
@@ -121,6 +129,12 @@ public class CheckIn {
     private Queue<ULD> storageAreaForEmptyULD;
     private Queue<ULD> storageAreaForFilledULD;
     private Robot robot;
+
+    private void AddEmptyULDsToStorageArea(){
+        for (int i = 1; i<=10; i++) {
+            storageAreaForEmptyULD.add(new ULD());
+        }
+    }
 
 
     public Hashtable<Integer, Passenger> ReadPassengerList() {

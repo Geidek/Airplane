@@ -189,7 +189,7 @@ public class Passenger extends Human
                 }
             }
 
-            conveyorBelt.AddBaggageToConveyorBelt(baggageTag, baggage);
+            conveyorBelt.AddBaggageToConveyorBelt(baggage);
         }
     }
 
